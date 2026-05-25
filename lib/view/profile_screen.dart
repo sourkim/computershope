@@ -40,13 +40,12 @@ class ProfileScreen extends StatelessWidget {
 
               Card(
                 child: ListTile(
-                  leading: IconButton(
-                    onPressed: () {
-                      context.read<ThemeProvider>().toggle();
-                    },
-                    icon: Icon(dark ? Icons.dark_mode : Icons.light_mode),
-                  ),
-                  title: Text("Change Theme"),
+                  leading: Icon(Icons.lightbulb),
+                  title: Text("Sweet to ${dark ? "Dark" : "Light"} Mode"),
+                  trailing: Icon(dark ? Icons.light_mode : Icons.dark_mode),
+                  onTap: () {
+                    context.read<ThemeProvider>().toggle();
+                  },
                 ),
               ),
 

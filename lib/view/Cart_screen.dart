@@ -111,7 +111,11 @@ class CartScreen extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  child: Icon(Icons.remove, size: 18),
+                                  child: Icon(
+                                    Icons.remove,
+                                    size: 18,
+                                    color: Colors.red,
+                                  ),
                                 ),
                               ),
                               Padding(
@@ -158,9 +162,15 @@ class CartScreen extends StatelessWidget {
               },
             ),
       bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(color: Colors.black.withOpacity(0.3), blurRadius: 3),
+          ],
+        ),
         width: double.infinity,
         height: 200,
-        color: Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Column(
