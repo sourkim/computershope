@@ -175,10 +175,11 @@ class CheckoutScreen extends StatelessWidget {
               width: double.infinity,
               height: 190,
               decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
                 color: Colors.white,
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.2),
+                    color: Colors.black.withOpacity(0.3),
                     blurRadius: 3,
                   ),
                 ],

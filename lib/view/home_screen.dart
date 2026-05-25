@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:project_api/service/api_service.dart';
 import 'package:project_api/view/detail_screen.dart';
 
@@ -64,48 +65,40 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
             SizedBox(height: 30),
-            CarouselSlider(
-              items: [
+            ImageSlideshow(children: [
+                Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ImageSlideshow(
+              width: 400,
+              height: 200,
+              isLoop: true,
+              autoPlayInterval: 3000,
+              children: [
                 ClipRRect(
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(20),
                   child: Image.network(
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1CLhLFXh0Oy-qVGbaEi8wz_-ixS8Ckt_t7Q&s",
+                    "https://i.pinimg.com/736x/9a/13/dc/9a13dc79ca4368d6c87acb2e52cadf9d.jpg",
                     fit: BoxFit.cover,
-                    width: double.infinity,
                   ),
                 ),
                 ClipRRect(
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(20),
                   child: Image.network(
-                    "https://i.pinimg.com/736x/13/e5/cd/13e5cd704f9ed67fc562481be03db292.jpg",
+                    "https://i.pinimg.com/736x/b0/c0/b8/b0c0b829bd054942ca7bda5aed8182f6.jpg",
                     fit: BoxFit.cover,
-                    width: double.infinity,
                   ),
                 ),
                 ClipRRect(
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(20),
                   child: Image.network(
-                    "https://i.pinimg.com/736x/68/58/ee/6858ee8b4207ec19f572609a289c574d.jpg",
+                    "https://i.pinimg.com/1200x/61/64/be/6164bef0f337104a4562d8515ff929fe.jpg",
                     fit: BoxFit.cover,
-                    width: double.infinity,
-                  ),
-                ),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(15),
-                  child: Image.network(
-                    "https://i.pinimg.com/736x/21/a5/39/21a539f6234f92d3b901b51e813b6780.jpg",
-                    fit: BoxFit.cover,
-                    width: double.infinity,
                   ),
                 ),
               ],
-              options: CarouselOptions(
-                height: 180,
-                autoPlay: true,
-                enlargeCenterPage: true,
-                viewportFraction: 0.9,
-              ),
             ),
+          ),
+            ]),
             SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
